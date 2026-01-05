@@ -67,14 +67,17 @@ function Home() {
       ref={containerRef}
       className="flex flex-col items-center justify-center gap-10 h-screen p-4 bg-[#ebeae6] text-primary"
     >
-      <header className="text-center text-[10px] uppercase" ref={headerRef}>
+      <header
+        className="text-center text-[0.5rem] md:text-[0.625rem] uppercase"
+        ref={headerRef}
+      >
         <h2>THE FREELANCE DIRECTORY</h2>
         <p>A Thomas Aufresne and Isaac Powell creation</p>
       </header>
-      <main className="flex-1 text-center flex flex-col items-center justify-center gap-20">
+      <main className="flex-1 text-center flex flex-col items-center justify-center gap-10 md:gap-16 md:ap-20">
         <h1
           ref={titleRef}
-          className="text-[20rem] font-bold uppercase font-anton overflow-hidden leading-[0.92] select-none"
+          className="text-[7rem] sm:text-[10rem] md:text-[20rem] 2xl:text-[25rem] font-bold uppercase font-anton overflow-hidden leading-[0.92] select-none"
         >
           LA PIGE
         </h1>
@@ -88,7 +91,10 @@ function Home() {
         </Link>
       </main>
       <footer className="flex justify-between items-center w-full uppercase relative">
-        <section className="flex gap-2" ref={socialNetworksSectionRef}>
+        <section
+          className="gap-2 hidden md:flex"
+          ref={socialNetworksSectionRef}
+        >
           <Button size="sm" variant="outline" className="rounded-full">
             INSTAGRAM
           </Button>
@@ -100,8 +106,10 @@ function Home() {
           className="absolute left-1/2 transform -translate-x-1/2"
           ref={footerRef}
         >
-          <p className="text-center text-[10px] uppercase">
-            <span>indépendant; à la pige; ADJ ‘/a la piʒ/’</span>
+          <p className="text-center text-[0.5rem] md:text-[0.625rem] uppercase">
+            <span className="whitespace-nowrap">
+              indépendant; à la pige; ADJ ‘/a la piʒ/’
+            </span>
             <br />
             <span>RELEASE v1.0 COMING SOON</span>
           </p>
